@@ -15,41 +15,103 @@
 
 </head>
 <body>
-  About
-  Careers
-  Events
-  Products
-  Support
+  <header>
+    <a href="#" class="header__logo" aria-label="company logo"></a>
 
-  Immersive experiences that deliver
+    <nav class="header__navbar">
+      <ul class="header__list">
+        <li class="header__item"><a href="#">About</a></li>
+        <li class="header__item"><a href="#">Careers</a></li>
+        <li class="header__item"><a href="#">Events</a></li>
+        <li class="header__item"><a href="#">Products</a></li>
+        <li class="header__item"><a href="#">Support</a></li>
+      </ul>
+    </nav>
+    
+    <button class="header__button" aria-label="menu-button"></button>
+  </header>
 
-  The leader in interactive VR
+  <main>
+    <section class="main__frontpage">
+      <div class="frontpage__container">
+        <h1 class="frontpage__title">IMMERSIVE EXPERIENCES THAT DELIVER</h1>
+      </div>
+    </section>
+    <section class="main__secondpage">
+      <div class="secondpage__container">
+        <div class="secondpage__image_container">
+          <picture>
+            <source srcset="./images/desktop/image-interactive.jpg" media="(min-width: 700px)">
+            <img src="./images/mobile/image-interactive.jpg" alt="A person playing with VR glasses">
+          </picture>
+        </div>
+        <div class="secondpage__content_container">
+          <h2 class="content__title">THE LEADER IN INTERACTIVE VR</h2>
+          <p class="content__text">Founded in 2011, Loopstudios has been producing world-class virtual reality projects for some of the best companies around the globe. Our award-winning creations have transformed businesses through digital experiences that bind to their brand.</p>
+        </div>
+      </div>
+    </section>
+    <section class="main__thirdpage">
+      <div class="thirdpage__container">
+        <div class="thirdpage__header">
+          <h2 class="thirdpage__title">OUR CREATIONS</h2>
+          <button class="thirdpage__upper_button">SEE ALL</button>
+        </div>
+        <div class="thirdpage__content_container">
+          <div class="thirdpage__deep_earth">
+            <span>DEEP EARTH</span>
+          </div>
+          <div class="thirdpage__night_arcade">
+            <span>NIGHT ARCADE</span>
+          </div>
+          <div class="thirdpage__soccer_Team">
+            <span>SOCCER TEAM VR</span>
+          </div>
+          <div class="thirdpage__the_grid">
+            <span>THE GRID</span>
+          </div>
+          <div class="thirdpage__from_up">
+            <span>FROM UP ABOVE VR</span>
+          </div>
+          <div class="thirdpage__pocket_borealis">
+            <span>POCKET BOREALIS</span>
+          </div>
+          <div class="thirdpage__the_curiosity">
+            <span>THE CURIOSITY</span>
+          </div>
+          <div class="thirdpage__fisheye">
+            <span>MAKE IT FISHEYE</span>
+          </div>
+        </div>
+        <button class="thirdpage__lower_button">SEE ALL</button>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="footer__container">
+      <div class="footer__navbar">
+        <a href="#" class="header__logo">logo</a>
+        <ul class="footer__list">
+          <li class="footer__item"><a href="#">About</a></li>
+          <li class="footer__item"><a href="#">Careers</a></li>
+          <li class="footer__item"><a href="#">Events</a></li>
+          <li class="footer__item"><a href="#">Products</a></li>
+          <li class="footer__item"><a href="#">Support</a></li>
+        </ul>
+      </div>
+      <div class="footer__social_rights">
+        <div class="footer__social_container">
+          <span class="footer__facebook">facebook</span>
+          <span class="footer__twitter">twitter</span>
+          <span class="footer__pinterest">pinterest</span>
+          <span class="footer__instagram">instagram</span>
+        </div>
+        <p class="footer__rights">© 2021 Loopstudios. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
 
-  Founded in 2011, Loopstudios has been producing world-class virtual reality 
-  projects for some of the best companies around the globe. Our award-winning 
-  creations have transformed businesses through digital experiences that bind 
-  to their brand.
-
-  Our creations
-
-  See all
-
-  Deep earth
-  Night arcade
-  Soccer team VR
-  The grid
-  From up above VR
-  Pocket borealis
-  The curiosity
-  Make it fisheye
-
-  About
-  Careers
-  Events
-  Products
-  Support
-
-  © 2021 Loopstudios. All rights reserved.
-
+  <script src="./index.js"></script>
 </body>
 </html>
+

@@ -48,6 +48,8 @@ header{
     max-width: 111rem;
     margin-left: auto;
     margin-right: auto;
+
+    z-index: 1;
 }
 .header__logo{
     width: 15rem;
@@ -59,7 +61,19 @@ header{
     background-position: center;
 }
 .header__navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+
+    background-color: black;
+    z-index: -1;
     display: none;
+}
+.header__navbar--active{
+    display: unset;
 }
 .header__list{}
 .header__item{}
@@ -72,6 +86,10 @@ header{
     background-position: center;
     border: none;
     background-color: transparent;
+    cursor: pointer;
+}
+.header__button--active{
+    background-image: url('../images/icon-close.svg');
 }
 main{
     display: flex;
@@ -90,7 +108,9 @@ main{
     background-position: top right;
 }
 .frontpage__container{
-    width: 80%;
+    width: 90%;
+    height: fit-content;
+    padding: 2.5rem 2.5rem 1.5rem 2.5rem;
     
     border: solid 0.2rem white;
 }
@@ -100,6 +120,7 @@ main{
     font-size: 4rem;
     font-family: var(--font-josefin);
     font-weight: 300;
+    line-height: 4rem;
 
     color: white;
 }

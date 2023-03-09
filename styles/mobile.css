@@ -52,6 +52,8 @@ header{
     z-index: 1;
 }
 .header__logo{
+    display: inline-block;
+
     width: 15rem;
     height: 3rem;
 
@@ -66,7 +68,6 @@ header{
     left: 0;
     right: 0;
     bottom: 0;
-    display: flex;
 
     background-color: black;
     z-index: -1;
@@ -75,8 +76,33 @@ header{
 .header__navbar--active{
     display: unset;
 }
-.header__list{}
-.header__item{}
+.header__list{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 3rem;
+
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    padding-inline-start: 3rem;
+
+}
+.header__item{
+    list-style: none;
+}
+.header__item a{
+    font-family: var(--font-josefin);
+    font-weight: 300;
+    text-decoration: none;
+    font-size: 3.4rem;
+
+    color: white;
+    cursor: pointer;
+}
+
 .header__button{
     width: 3rem;
     height: 3rem;
@@ -94,6 +120,9 @@ header{
 main{
     display: flex;
     flex-direction: column;
+    gap: 10rem;
+
+    padding-block-end: 10rem;
 }
 .main__frontpage{
     display: flex;
@@ -109,6 +138,7 @@ main{
 }
 .frontpage__container{
     width: 90%;
+    max-width: 50rem;
     height: fit-content;
     padding: 2.5rem 2.5rem 1.5rem 2.5rem;
     
@@ -124,38 +154,235 @@ main{
 
     color: white;
 }
-.main__secondpage{}
-.secondpage__container{}
-.secondpage__image_container{}
-.secondpage__content_container{}
-.content__title{}
-.content__text{}
-.main__thirdpage{}
-.thirdpage__container{}
-.thirdpage__header{}
-.thirdpage__title{}
-.thirdpage__upper_button{}
-.thirdpage__content_container{}
-.thirdpage__deep_earth{}
-.thirdpage__night_arcade{}
-.thirdpage__soccer_Team{}
-.thirdpage__the_grid{}
-.thirdpage__from_up{}
-.thirdpage__pocket_borealis{}
-.thirdpage__the_curiosity{}
-.thirdpage__fisheye{}
-.thirdpage__lower_button{}
-footer{
+.main__secondpage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.secondpage__container{
+    width: 88%;
+    height: fit-content;
+    max-width: 50rem;
+}
+.secondpage__image_container{
+
+}
+.secondpage__content_container{
+    margin-block-start: 3rem;
+}
+.content__title{
+    padding: 0 2rem;
+
+    font-size: 3rem;
+    line-height: 3rem;
+    font-family: var(--font-josefin);
+    font-weight: 300;
+    text-align: center;
+}
+.content__text{
+    margin-block-start: 2rem;
+    padding: 0 2rem;
+
+    text-align: center;
+    font-family: var(--font-alata);
+    font-weight: 400;
+    color: var(--dark-gray);
+}
+.main__thirdpage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.thirdpage__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 88%;
+    height: fit-content;
+    max-width: 50rem;
+}
+.thirdpage__header{
+    display: flex;
+    justify-content: center;
+
+    margin-block-end: 4rem;
+}
+.thirdpage__title{
+    font-size: 3rem;
+    font-family: var(--font-josefin);
+    font-weight: 300;
+    text-align: center;
+}
+.thirdpage__upper_button{
+    width: 18rem;
+    height: 4.6rem;
+
+    text-align: center;
+    font-size: 1.8rem;
+    line-height: 1.8rem;
+    font-family: var(--font-alata);
+    letter-spacing: 0.6rem;
+
+    border: solid 0.1rem black;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all ease-in 0.1s;
+
     display: none;
 }
-.footer__container{}
-.footer__navbar{}
-.footer__list{}
-.footer__item{}
-.footer__social_rights{}
-.footer__social_container{}
-.footer__facebook{}
-.footer__twitter{}
-.footer__pinterest{}
-.footer__instagram{}
-.footer__rights{}
+.thirdpage__content_container{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(8, 10rem);
+    row-gap: 2rem;
+
+    width: 100%;
+    margin-block-end: 4rem;
+}
+.thirdpage__content_container div{
+    display: flex;
+    justify-content: start;
+    align-items: flex-end;
+
+    padding: 1.5rem;
+
+    line-height: 2.2rem;
+    font-size: 2.2rem;
+    font-family: var(--font-josefin);
+    font-weight: 300;
+
+    background-position: top left;
+    background-size: cover;
+    color: white;
+}
+.thirdpage__deep_earth{
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.616) 0%, rgba(0,0,0,0.29315476190476186) 45%, rgba(0,212,255,0) 100%), url('../images/mobile/image-deep-earth.jpg');
+}
+.thirdpage__night_arcade{
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.616) 0%, rgba(0,0,0,0.29315476190476186) 45%, rgba(0,212,255,0) 100%),url('../images/mobile/image-night-arcade.jpg');
+}
+.thirdpage__soccer_Team{
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.616) 0%, rgba(0,0,0,0.29315476190476186) 45%, rgba(0,212,255,0) 100%),url('../images/mobile/image-soccer-team.jpg');
+}
+.thirdpage__the_grid{
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.616) 0%, rgba(0,0,0,0.29315476190476186) 45%, rgba(0,212,255,0) 100%),url('../images/mobile/image-grid.jpg');
+}
+.thirdpage__from_up{
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.616) 0%, rgba(0,0,0,0.29315476190476186) 45%, rgba(0,212,255,0) 100%),url('../images/mobile/image-from-above.jpg');
+}
+.thirdpage__pocket_borealis{
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.616) 0%, rgba(0,0,0,0.29315476190476186) 45%, rgba(0,212,255,0) 100%),url('../images/mobile/image-pocket-borealis.jpg');
+}
+.thirdpage__the_curiosity{
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.616) 0%, rgba(0,0,0,0.29315476190476186) 45%, rgba(0,212,255,0) 100%),url('../images/mobile/image-curiosity.jpg');
+}
+.thirdpage__fisheye{
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.616) 0%, rgba(0,0,0,0.29315476190476186) 45%, rgba(0,212,255,0) 100%),url('../images/mobile/image-fisheye.jpg');
+}
+.thirdpage__lower_button{
+    width: 18rem;
+    height: 4.6rem;
+
+    text-align: center;
+    font-size: 1.8rem;
+    line-height: 1.8rem;
+    font-family: var(--font-alata);
+    letter-spacing: 0.6rem;
+
+    border: solid 0.1rem black;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all ease-in 0.1s;
+}
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 5rem 0;
+
+    background-color: black;
+}
+.footer__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+
+    width: 80%;
+    max-width: 50rem;
+}
+.footer__navbar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+.footer__list{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    padding: 0;
+    margin: 0;
+}
+.footer__item{
+    text-align: center;
+    list-style: none;
+}
+.footer__item a{
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-family: var(--font-alata);
+
+    color: white;
+    cursor: pointer;
+}
+.footer__social_rights{
+    display: flex;
+    flex-direction: column;
+
+    color: white;
+}
+.footer__social_container{
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+.footer__social_container a{
+    display: inline-block;
+
+    width: 2.5rem;
+    height: 2.5rem;
+
+    background-position: center;
+    background-size: 2.5rem;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.footer__facebook{
+    background-image: url('../images/icon-facebook.svg');
+}
+.footer__twitter{
+    background-image: url('../images/icon-twitter.svg');
+}
+.footer__pinterest{
+    background-image: url('../images/icon-pinterest.svg');
+}
+.footer__instagram{
+    background-image: url('../images/icon-instagram.svg');
+}
+.footer__rights{
+    margin-block-start: 2rem;
+
+    font-family: var(--font-alata);
+    font-size: 1.4rem;
+
+    color: var(--very-dark-gray);
+}
+
+@media (hover:hover){
+    
+}

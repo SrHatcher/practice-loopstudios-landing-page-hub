@@ -1,0 +1,473 @@
+
+header{
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+
+    width: 85%;
+    max-width: 111rem;
+    margin-left: auto;
+    margin-right: auto;
+
+    z-index: 1;
+}
+.header__logo{
+    display: inline-block;
+
+    width: 15rem;
+    height: 3rem;
+
+    background-image: url('../images/logo.svg');
+    background-repeat: no-repeat;
+    background-size: 15rem;
+    background-position: center;
+}
+.header__navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background-color: black;
+    z-index: -1;
+    display: none;
+}
+.header__navbar--active{
+    display: unset;
+}
+.header__list{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 3rem;
+
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    padding-inline-start: 3rem;
+
+}
+.header__item{
+    list-style: none;
+}
+.header__item a{
+    position: relative;
+
+    font-family: var(--font-josefin);
+    font-weight: 300;
+    text-decoration: none;
+    font-size: 3.4rem;
+
+    color: white;
+    cursor: pointer;
+}
+
+.header__button{
+    width: 3rem;
+    height: 3rem;
+
+    background-image: url('../images/icon-hamburger.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.header__button--active{
+    background-image: url('../images/icon-close.svg');
+}
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+
+    padding-block-end: 10rem;
+}
+.main__frontpage{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 80vh;
+
+    background-image: url('../images/mobile/image-hero.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+.frontpage__container{
+    width: 90%;
+    max-width: 50rem;
+    height: fit-content;
+    padding: 2.5rem 2.5rem 1.5rem 2.5rem;
+    
+    border: solid 0.2rem white;
+}
+.frontpage__title{
+    padding-inline-end: 2rem;
+
+    font-size: 4rem;
+    font-family: var(--font-josefin);
+    font-weight: 300;
+    line-height: 4rem;
+
+    color: white;
+}
+.main__secondpage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.secondpage__container{
+    width: 88%;
+    height: fit-content;
+    max-width: 50rem;
+}
+.secondpage__image_container{
+
+}
+.secondpage__content_container{
+    margin-block-start: 3rem;
+}
+.content__title{
+    padding: 0 2rem;
+
+    font-size: 3rem;
+    line-height: 3rem;
+    font-family: var(--font-josefin);
+    font-weight: 300;
+    text-align: center;
+}
+.content__text{
+    margin-block-start: 2rem;
+    padding: 0 2rem;
+
+    text-align: center;
+    font-family: var(--font-alata);
+    font-weight: 400;
+    color: var(--dark-gray);
+}
+.main__thirdpage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.thirdpage__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 88%;
+    height: fit-content;
+    max-width: 50rem;
+}
+.thirdpage__header{
+    display: flex;
+    justify-content: center;
+
+    margin-block-end: 4rem;
+}
+.thirdpage__title{
+    font-size: 3rem;
+    font-family: var(--font-josefin);
+    font-weight: 300;
+    text-align: center;
+}
+.thirdpage__upper_button{
+    width: 18rem;
+    height: 4.6rem;
+
+    text-align: center;
+    font-size: 1.8rem;
+    line-height: 1.8rem;
+    font-family: var(--font-alata);
+    letter-spacing: 0.6rem;
+
+    border: solid 0.1rem black;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all ease-in 0.1s;
+
+    display: none;
+}
+.thirdpage__content_container{
+    position: relative;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(8, 10rem);
+    row-gap: 2rem;
+
+    width: 100%;
+    margin-block-end: 4rem;
+}
+.thirdpage__content_container > div{
+    position: relative;
+    display: flex;
+    justify-content: start;
+    align-items: flex-end;
+
+    padding: 1.5rem;
+
+    line-height: 2.2rem;
+    font-size: 2.2rem;
+    font-family: var(--font-josefin);
+    font-weight: 300;
+
+    background-position: top left;
+    background-size: cover;
+    color: white;
+    cursor: pointer;
+}
+.thirdpage__modal{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    transition: all ease-in 0.1s;
+
+}
+.thirdpage__deep_earth{
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.616) 0%, rgba(0,0,0,0.29315476190476186) 45%, rgba(0,212,255,0) 100%), url('../images/mobile/image-deep-earth.jpg');
+}
+.thirdpage__night_arcade{
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.616) 0%, rgba(0,0,0,0.29315476190476186) 45%, rgba(0,212,255,0) 100%),url('../images/mobile/image-night-arcade.jpg');
+}
+.thirdpage__soccer_Team{
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.616) 0%, rgba(0,0,0,0.29315476190476186) 45%, rgba(0,212,255,0) 100%),url('../images/mobile/image-soccer-team.jpg');
+}
+.thirdpage__the_grid{
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.616) 0%, rgba(0,0,0,0.29315476190476186) 45%, rgba(0,212,255,0) 100%),url('../images/mobile/image-grid.jpg');
+}
+.thirdpage__from_up{
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.616) 0%, rgba(0,0,0,0.29315476190476186) 45%, rgba(0,212,255,0) 100%),url('../images/mobile/image-from-above.jpg');
+}
+.thirdpage__pocket_borealis{
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.616) 0%, rgba(0,0,0,0.29315476190476186) 45%, rgba(0,212,255,0) 100%),url('../images/mobile/image-pocket-borealis.jpg');
+}
+.thirdpage__the_curiosity{
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.616) 0%, rgba(0,0,0,0.29315476190476186) 45%, rgba(0,212,255,0) 100%),url('../images/mobile/image-curiosity.jpg');
+}
+.thirdpage__fisheye{
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.616) 0%, rgba(0,0,0,0.29315476190476186) 45%, rgba(0,212,255,0) 100%),url('../images/mobile/image-fisheye.jpg');
+}
+.thirdpage__lower_button{
+    width: 18rem;
+    height: 4.6rem;
+
+    text-align: center;
+    font-size: 1.8rem;
+    line-height: 1.8rem;
+    font-family: var(--font-alata);
+    letter-spacing: 0.6rem;
+
+    border: solid 0.1rem black;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all ease-in 0.1s;
+}
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 5rem 0;
+
+    background-color: black;
+}
+.footer__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+
+    width: 80%;
+    max-width: 50rem;
+}
+.footer__navbar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+.footer__list{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    padding: 0;
+    margin: 0;
+}
+.footer__item{
+    text-align: center;
+    list-style: none;
+}
+.footer__item a{
+    position: relative;
+
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-family: var(--font-alata);
+
+    color: white;
+    cursor: pointer;
+}
+.line{
+    position: absolute;
+    bottom: -0.4rem;
+    left: 0;
+    right: 0;
+    display: inline-block;
+
+    width: 60%;
+    height: 0.3rem;
+    margin-right: auto;
+    margin-left: auto;
+
+    background-color: transparent;
+}
+.footer__social_rights{
+    display: flex;
+    flex-direction: column;
+
+    color: white;
+}
+.footer__social_container{
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+.footer__social_container a{
+    position: relative;
+    display: inline-block;
+
+    width: 2.5rem;
+    height: 2.5rem;
+
+    background-position: center;
+    background-size: 2.5rem;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.complete__line{
+    position: absolute;
+    bottom: -0.7rem;
+    left: 0;
+    right: 0;
+    display: inline-block;
+
+    width: 100%;
+    height: 0.3rem;
+    margin-right: auto;
+    margin-left: auto;
+
+    background-color: transparent;
+}
+.footer__facebook{
+    background-image: url('../images/icon-facebook.svg');
+}
+.footer__twitter{
+    background-image: url('../images/icon-twitter.svg');
+}
+.footer__pinterest{
+    background-image: url('../images/icon-pinterest.svg');
+}
+.footer__instagram{
+    background-image: url('../images/icon-instagram.svg');
+}
+.footer__rights{
+    margin-block-start: 2rem;
+
+    font-family: var(--font-alata);
+    font-size: 1.4rem;
+
+    color: var(--very-dark-gray);
+}
+
+@media (hover:hover){
+    .thirdpage__upper_button:hover{
+        background-color: black;
+        color: white;
+        border-color: solid 0.1rem var(--very-dark-gray);
+    }
+    .thirdpage__lower_button:hover{
+        background-color: black;
+        color: white;
+        border-color: solid 0.1rem var(--very-dark-gray);
+    }
+
+    .thirdpage__deep_earth:hover .thirdpage__modal{
+        background-color: rgba(255, 255, 255, 0.733);
+    }
+    .thirdpage__deep_earth:hover span{
+        color: black;
+        z-index: 2;
+    }
+    .thirdpage__night_arcade:hover .thirdpage__modal{
+        background-color: rgba(255, 255, 255, 0.733);
+    }
+    .thirdpage__night_arcade:hover span{
+        color: black;
+        z-index: 2;
+    }
+    .thirdpage__soccer_Team:hover .thirdpage__modal{
+        background-color: rgba(255, 255, 255, 0.733);
+    }
+    .thirdpage__soccer_Team:hover span{
+        color: black;
+        z-index: 2;
+    }
+    .thirdpage__the_grid:hover .thirdpage__modal{
+        background-color: rgba(255, 255, 255, 0.733);
+    }
+    .thirdpage__the_grid:hover span{
+        color: black;
+        z-index: 2;
+    }
+    .thirdpage__from_up:hover .thirdpage__modal{
+        background-color: rgba(255, 255, 255, 0.733);
+    }
+    .thirdpage__from_up:hover span{
+        color: black;
+        z-index: 2;
+    }
+    .thirdpage__pocket_borealis:hover .thirdpage__modal{
+        background-color: rgba(255, 255, 255, 0.733);
+    }
+    .thirdpage__pocket_borealis:hover span{
+        color: black;
+        z-index: 2;
+    }
+    .thirdpage__the_curiosity:hover .thirdpage__modal{
+        background-color: rgba(255, 255, 255, 0.733);
+    }
+    .thirdpage__the_curiosity:hover span {
+        color: black;
+        z-index: 2;
+    }
+    .thirdpage__fisheye:hover .thirdpage__modal{
+        background-color: rgba(255, 255, 255, 0.733);
+    }
+    .thirdpage__fisheye:hover span{
+        color: black;
+        z-index: 2;
+    }
+    .header__item a:hover .line{
+        background-color: white;
+    }
+
+    .footer__item a:hover .line{
+        background-color: white;
+    }
+    .footer__social_container a:hover .complete__line{
+        background-color: white;
+    }
+}

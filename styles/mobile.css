@@ -94,6 +94,8 @@ header{
     list-style: none;
 }
 .header__item a{
+    position: relative;
+
     font-family: var(--font-josefin);
     font-weight: 300;
     text-decoration: none;
@@ -233,6 +235,7 @@ main{
     display: none;
 }
 .thirdpage__content_container{
+    position: relative;
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: repeat(8, 10rem);
@@ -241,7 +244,8 @@ main{
     width: 100%;
     margin-block-end: 4rem;
 }
-.thirdpage__content_container div{
+.thirdpage__content_container > div{
+    position: relative;
     display: flex;
     justify-content: start;
     align-items: flex-end;
@@ -256,6 +260,17 @@ main{
     background-position: top left;
     background-size: cover;
     color: white;
+    cursor: pointer;
+}
+.thirdpage__modal{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    transition: all ease-in 0.1s;
+
 }
 .thirdpage__deep_earth{
     background: linear-gradient(90deg, rgba(0, 0, 0, 0.616) 0%, rgba(0,0,0,0.29315476190476186) 45%, rgba(0,212,255,0) 100%), url('../images/mobile/image-deep-earth.jpg');
@@ -333,12 +348,28 @@ footer{
     list-style: none;
 }
 .footer__item a{
+    position: relative;
+
     text-decoration: none;
     font-size: 1.6rem;
     font-family: var(--font-alata);
 
     color: white;
     cursor: pointer;
+}
+.line{
+    position: absolute;
+    bottom: -0.4rem;
+    left: 0;
+    right: 0;
+    display: inline-block;
+
+    width: 60%;
+    height: 0.3rem;
+    margin-right: auto;
+    margin-left: auto;
+
+    background-color: transparent;
 }
 .footer__social_rights{
     display: flex;
@@ -352,6 +383,7 @@ footer{
     gap: 1.5rem;
 }
 .footer__social_container a{
+    position: relative;
     display: inline-block;
 
     width: 2.5rem;
@@ -361,6 +393,20 @@ footer{
     background-size: 2.5rem;
     background-repeat: no-repeat;
     cursor: pointer;
+}
+.complete__line{
+    position: absolute;
+    bottom: -0.7rem;
+    left: 0;
+    right: 0;
+    display: inline-block;
+
+    width: 100%;
+    height: 0.3rem;
+    margin-right: auto;
+    margin-left: auto;
+
+    background-color: transparent;
 }
 .footer__facebook{
     background-image: url('../images/icon-facebook.svg');
@@ -384,5 +430,81 @@ footer{
 }
 
 @media (hover:hover){
-    
+    .thirdpage__upper_button:hover{
+        background-color: black;
+        color: white;
+        border-color: solid 0.1rem var(--very-dark-gray);
+    }
+    .thirdpage__lower_button:hover{
+        background-color: black;
+        color: white;
+        border-color: solid 0.1rem var(--very-dark-gray);
+    }
+
+    .thirdpage__deep_earth:hover .thirdpage__modal{
+        background-color: rgba(255, 255, 255, 0.733);
+    }
+    .thirdpage__deep_earth:hover span{
+        color: black;
+        z-index: 2;
+    }
+    .thirdpage__night_arcade:hover .thirdpage__modal{
+        background-color: rgba(255, 255, 255, 0.733);
+    }
+    .thirdpage__night_arcade:hover span{
+        color: black;
+        z-index: 2;
+    }
+    .thirdpage__soccer_Team:hover .thirdpage__modal{
+        background-color: rgba(255, 255, 255, 0.733);
+    }
+    .thirdpage__soccer_Team:hover span{
+        color: black;
+        z-index: 2;
+    }
+    .thirdpage__the_grid:hover .thirdpage__modal{
+        background-color: rgba(255, 255, 255, 0.733);
+    }
+    .thirdpage__the_grid:hover span{
+        color: black;
+        z-index: 2;
+    }
+    .thirdpage__from_up:hover .thirdpage__modal{
+        background-color: rgba(255, 255, 255, 0.733);
+    }
+    .thirdpage__from_up:hover span{
+        color: black;
+        z-index: 2;
+    }
+    .thirdpage__pocket_borealis:hover .thirdpage__modal{
+        background-color: rgba(255, 255, 255, 0.733);
+    }
+    .thirdpage__pocket_borealis:hover span{
+        color: black;
+        z-index: 2;
+    }
+    .thirdpage__the_curiosity:hover .thirdpage__modal{
+        background-color: rgba(255, 255, 255, 0.733);
+    }
+    .thirdpage__the_curiosity:hover span {
+        color: black;
+        z-index: 2;
+    }
+    .thirdpage__fisheye:hover .thirdpage__modal{
+        background-color: rgba(255, 255, 255, 0.733);
+    }
+    .thirdpage__fisheye:hover span{
+        color: black;
+        z-index: 2;
+    }
+    .header__item a:hover .line{
+        background-color: white;
+    }
+
+    .footer__item a:hover .line{
+        background-color: white;
+    }
+    .footer__social_container a:hover .complete__line{
+        background-color: white;
+    }
 }

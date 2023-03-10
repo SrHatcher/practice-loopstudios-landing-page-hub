@@ -48,7 +48,7 @@ main{
 
     height: 80vh;
 
-    background:  rgb(0, 0, 0),url('../images/desktop/image-hero.jpg');
+    background:  url('../images/desktop/hero-02.jpg');
     background-size: cover, cover;
     background-repeat: no-repeat, no-repeat;
     background-position: top right, top right;
@@ -99,25 +99,33 @@ main{
     position: absolute;
     bottom: 0;
     right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: flex-end;
 
-    margin-block-start: 3rem;
+    width: 54rem;
+    height: 31.9rem;
+    padding-inline-start: 10.5rem;
+
+    margin-block-start: unset;
 
     background-color: white;
 }
 .content__title{
-    padding: 0 2rem;
+    padding: 0 0rem;
 
-    font-size: 3rem;
-    line-height: 3rem;
+    font-size: 5rem;
+    line-height: 5rem;
     font-family: var(--font-josefin);
     font-weight: 300;
-    text-align: center;
+    text-align: left;
 }
 .content__text{
-    margin-block-start: 2rem;
-    padding: 0 2rem;
+    margin-block-start: 3rem;
+    padding: 0 0rem;
 
-    text-align: center;
+    text-align: left;
     font-family: var(--font-alata);
     font-weight: 400;
     color: var(--dark-gray);
@@ -135,16 +143,18 @@ main{
 
     width: 88%;
     height: fit-content;
-    max-width: 50rem;
+    max-width: 111rem;
 }
 .thirdpage__header{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+
+    width: 100%;
 
     margin-block-end: 4rem;
 }
 .thirdpage__title{
-    font-size: 3rem;
+    font-size: 4rem;
     font-family: var(--font-josefin);
     font-weight: 300;
     text-align: center;
@@ -164,14 +174,14 @@ main{
     cursor: pointer;
     transition: all ease-in 0.1s;
 
-    display: none;
+    display: unset;
 }
 .thirdpage__content_container{
-    position: relative;
     display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: repeat(8, 10rem);
-    row-gap: 2rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 48rem 48rem;
+    row-gap: 3rem;
+    column-gap: 3rem;
 
     width: 100%;
     margin-block-end: 4rem;
@@ -205,43 +215,31 @@ main{
 
 }
 .thirdpage__deep_earth{
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.616) 0%, rgba(0,0,0,0.29315476190476186) 45%, rgba(0,212,255,0) 100%), url('../images/mobile/image-deep-earth.jpg');
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.616) 0%, rgba(0,0,0,0.29315476190476186) 45%, rgba(0,212,255,0) 100%), url('../images/desktop/image-deep-earth.jpg');
 }
 .thirdpage__night_arcade{
-    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.616) 0%, rgba(0,0,0,0.29315476190476186) 45%, rgba(0,212,255,0) 100%),url('../images/mobile/image-night-arcade.jpg');
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.616) 0%, rgba(0,0,0,0.29315476190476186) 45%, rgba(0,212,255,0) 100%),url('../images/desktop/image-night-arcade.jpg');
 }
 .thirdpage__soccer_Team{
-    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.616) 0%, rgba(0,0,0,0.29315476190476186) 45%, rgba(0,212,255,0) 100%),url('../images/mobile/image-soccer-team.jpg');
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.616) 0%, rgba(0,0,0,0.29315476190476186) 45%, rgba(0,212,255,0) 100%),url('../images/desktop/image-soccer-team.jpg');
 }
 .thirdpage__the_grid{
-    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.616) 0%, rgba(0,0,0,0.29315476190476186) 45%, rgba(0,212,255,0) 100%),url('../images/mobile/image-grid.jpg');
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.616) 0%, rgba(0,0,0,0.29315476190476186) 45%, rgba(0,212,255,0) 100%),url('../images/desktop/image-grid.jpg');
 }
 .thirdpage__from_up{
-    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.616) 0%, rgba(0,0,0,0.29315476190476186) 45%, rgba(0,212,255,0) 100%),url('../images/mobile/image-from-above.jpg');
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.616) 0%, rgba(0,0,0,0.29315476190476186) 45%, rgba(0,212,255,0) 100%),url('../images/desktop/image-from-above.jpg');
 }
 .thirdpage__pocket_borealis{
-    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.616) 0%, rgba(0,0,0,0.29315476190476186) 45%, rgba(0,212,255,0) 100%),url('../images/mobile/image-pocket-borealis.jpg');
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.616) 0%, rgba(0,0,0,0.29315476190476186) 45%, rgba(0,212,255,0) 100%),url('../images/desktop/image-pocket-borealis.jpg');
 }
 .thirdpage__the_curiosity{
-    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.616) 0%, rgba(0,0,0,0.29315476190476186) 45%, rgba(0,212,255,0) 100%),url('../images/mobile/image-curiosity.jpg');
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.616) 0%, rgba(0,0,0,0.29315476190476186) 45%, rgba(0,212,255,0) 100%),url('../images/desktop/image-curiosity.jpg');
 }
 .thirdpage__fisheye{
-    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.616) 0%, rgba(0,0,0,0.29315476190476186) 45%, rgba(0,212,255,0) 100%),url('../images/mobile/image-fisheye.jpg');
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.616) 0%, rgba(0,0,0,0.29315476190476186) 45%, rgba(0,212,255,0) 100%),url('../images/desktop/image-fisheye.jpg');
 }
 .thirdpage__lower_button{
-    width: 18rem;
-    height: 4.6rem;
-
-    text-align: center;
-    font-size: 1.8rem;
-    line-height: 1.8rem;
-    font-family: var(--font-alata);
-    letter-spacing: 0.6rem;
-
-    border: solid 0.1rem black;
-    background-color: transparent;
-    cursor: pointer;
-    transition: all ease-in 0.1s;
+    display: none;
 }
 footer{
     display: flex;
@@ -254,22 +252,23 @@ footer{
 }
 .footer__container{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    gap: 4rem;
+    gap: unset;
 
     width: 80%;
-    max-width: 50rem;
+    max-width: 111rem;
 }
 .footer__navbar{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     gap: 3rem;
 }
 .footer__list{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 1.5rem;
 
     padding: 0;
@@ -286,7 +285,7 @@ footer{
     font-size: 1.6rem;
     font-family: var(--font-alata);
 
-    color: white;
+    color: var(--dark-gray);
     cursor: pointer;
 }
 .line{
@@ -306,6 +305,9 @@ footer{
 .footer__social_rights{
     display: flex;
     flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 3rem;
 
     color: white;
 }
@@ -353,12 +355,13 @@ footer{
     background-image: url('../images/icon-instagram.svg');
 }
 .footer__rights{
-    margin-block-start: 2rem;
+    margin-block-start: unset;
+
 
     font-family: var(--font-alata);
     font-size: 1.4rem;
 
-    color: var(--very-dark-gray);
+    color: var(--dark-gray);
 }
 
 @media (hover:hover){

@@ -9,3 +9,5 @@ Thanks for checking out this front-end coding challenge.
 **To do this challenge, you need a good understanding of HTML and CSS and a basic understanding of JavaScript.**
 
 ## The challenge
+
+https://srhatcher.github.io/practice-loopstudios-landing-page-hub/

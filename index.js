@@ -4,7 +4,6 @@ const headerItems = document.querySelectorAll('.header__item')
 
 function lowerCase(){
     if(window.innerWidth >= 1000){
-        console.log(window.innerWidth)
         headerItems.forEach((element)=>{
             let lowerText = element.innerText.toLowerCase()
             let correctText = lowerText.charAt(0).toUpperCase() + lowerText.slice(1)
